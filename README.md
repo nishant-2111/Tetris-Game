@@ -45,7 +45,7 @@
 ## 📦 Getting Started
 
 ```bash
-git clone https://github.com/your-username/tetris-game.git
+git clone https://github.com/nishant-2111/Tetris-Game.git
 cd tetris-game
 open index.html
 ```
