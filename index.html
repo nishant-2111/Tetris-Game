@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="game-wrap">
+
+    <!-- Left Panel -->
+    <div class="side-panel">
+        <div class="panel-card">
+            <div class="panel-label">Score</div>
+            <div class="panel-value" id="score-display">0</div>
+            <div class="streak-bar"><div class="streak-fill" id="streak-fill"></div></div>
+        </div>
+        <div class="panel-card">
+            <div class="panel-label">Level</div>
+            <div class="level-value" id="level-display">1</div>
+        </div>
+        <div class="panel-card">
+            <div class="panel-label">Lines</div>
+            <div class="level-value" id="lines-display">0</div>
+        </div>
+        <button id="pause-btn">⏸ PAUSE</button>
+    </div>
+
+    <!-- Game Canvas -->
+    <div class="canvas-wrap">
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div id="paused-overlay">
+            <div class="paused-text">PAUSED</div>
+        </div>
+        <div id="game-over-overlay">
+            <div class="go-text">GAME OVER</div>
+            <div class="go-score" id="final-score">SCORE: 0</div>
+            <button id="restart-btn">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="side-panel">
+        <div class="panel-card" style="text-align:center;">
+            <div class="panel-label">Next</div>
+            <canvas id="next-canvas" width="80" height="80"></canvas>
+        </div>
+        <div class="panel-card">
+            <div class="panel-label" style="margin-bottom:10px;">Controls</div>
+            <div class="key-row"><div class="key">▲</div></div>
+            <div class="key-row"><div class="key">◀</div><div class="key">▼</div><div class="key">▶</div></div>
+            <div class="controls-hint">↑ ROTATE<br>← → MOVE<br>↓ SOFT DROP<br>SPACE PAUSE</div>
+        </div>
+        <div class="panel-card">
+            <div class="panel-label">Best</div>
+            <div class="level-value" id="best-display">0</div>
+        </div>
+    </div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
